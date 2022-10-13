@@ -1,0 +1,34 @@
+Source: node-d3-fetch
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Dhanesh B. Sabane <dhanesh95@disroot.org>, Nilesh Patra <nilesh@debian.org>
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , nodejs
+ , node-d3-dsv
+ , rollup
+ , node-rollup-plugin-terser
+Standards-Version: 4.6.0
+Homepage: https://d3js.org/d3-fetch/
+Vcs-Git: https://salsa.debian.org/js-team/node-d3-fetch.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-d3-fetch
+
+Package: node-d3-fetch
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-d3-dsv
+Description: Convenient parsing for Fetch
+ This module provides convenient parsing on top of Fetch. This module replaced
+ d3-request.
+ .
+ The fetch standard defines requests, responses and the process that binds them:
+ fetching.
+ .
+ This module has built-in support for parsing JSON, CSV and TSV. You can
+ parse additional formats by using text directly.
+ .
+ Node.js is an event-based server-side JavaScript engine.
