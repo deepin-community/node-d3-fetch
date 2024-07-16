@@ -2,25 +2,26 @@ Source: node-d3-fetch
 Section: javascript
 Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Uploaders: Dhanesh B. Sabane <dhanesh95@disroot.org>, Nilesh Patra <nilesh@debian.org>
-Build-Depends:
- debhelper-compat (= 13)
+Uploaders: Dhanesh B. Sabane <dhanesh95@disroot.org>
+ , Nilesh Patra <nilesh@debian.org>
+Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , nodejs
  , node-d3-dsv
- , rollup
  , node-rollup-plugin-terser
-Standards-Version: 4.6.0
-Homepage: https://d3js.org/d3-fetch/
-Vcs-Git: https://salsa.debian.org/js-team/node-d3-fetch.git
+ , nodejs
+ , rollup
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/js-team/node-d3-fetch
+Vcs-Git: https://salsa.debian.org/js-team/node-d3-fetch.git
+Homepage: https://d3js.org/d3-fetch/
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
 Package: node-d3-fetch
 Architecture: all
-Depends:
- ${misc:Depends}
- , nodejs
- , node-d3-dsv
+Depends: node-d3-dsv
+ , ${misc:Depends}
+Provides: ${nodejs:Provides}
 Description: Convenient parsing for Fetch
  This module provides convenient parsing on top of Fetch. This module replaced
  d3-request.
